@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="search.js"></script>
+    <title>PoemDiary | Add Poem</title>
+</head>
+<body onload="demo()">
+    <header>
+        <section id="navbar">
+            <ul>
+                <h2>
+                    <a href="" id="logolink">
+                        <img id= "logo" src="img/poetry.png"alt="logo">PoemDiary
+                    </a>
+                </h2>
+
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for poems.." autofocus>
+                <!-- <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>                 -->
+            </ul>
+        </section>
+    </header>
+    
+    <main id="addpoemmain">
+        <div class="upload">
+            <h2>Add a new Poem</h2>
+            Poem Name  <br>
+            <input type="text" value=""> <br>
+            <input type="file" name="newimg" id=""> <br>
+            <input type="button" value="Add">
+        </div>
+    </main>
+    <footer>
+        <section id="footer">
+            <ul>
+                <li>PoemDiary</li>
+                <li>Design by:<a href="">singhkunal2050 &copy;</a></li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>
