@@ -1,8 +1,3 @@
-function demo(){
-    // alert("Welcome");
-
-}
-
 
 function myFunction() {
     var input, filter, ul, li, a, i, txtValue;
