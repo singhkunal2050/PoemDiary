@@ -28,6 +28,34 @@ a{
     text-decoration: none;
 }
 
+/* lightbox  */
+
+#lightbox {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: none;
+}
+  
+
+#lightbox.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  #lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    padding: 4px;
+    background-color: black;
+    border: 2px solid white;
+}
+
+
 /* navbar */
 
 #navbar{
@@ -70,14 +98,6 @@ a{
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-}
-
-#navbar li a{
-    /* border:  2px solid var(--primary-col); */
-    /* background-color: #220c22; */
-    padding: 15px;
-    margin: 10px;
-    border-radius: 50% 4px;
 }
 
 #navbar li a:hover{
@@ -151,8 +171,7 @@ a{
 
 
 #content-grid{
-    /* background-image: linear-gradient(10deg,#faadad,#f1f1b0); */
-    background: rgba(255, 187, 29, 0.267);
+    background-image: linear-gradient(10deg,#faadad85,#f1f1b077); 
     transition: ease .5s;
     min-height: 100vh;
     /* border: 5px solid goldenrod; */
@@ -218,9 +237,9 @@ a{
 
 
 
-@media(max-width:540px){
+@media(max-width:630px){
     #navbar{
-        height: 85px;
+        height: 95px;
     }
 
     #navbar h2{
@@ -237,91 +256,84 @@ a{
     }
      
     #main{
-        margin-top:88px ;
-    }
-
-}
-
-@media(max-width:430px){
-    #navbar{
-        height: 95px;
-    }
-
-    #navbar ul{
-        padding: 20px 5px;
-    }
-    #navbar h2{
-        margin-left: 0  ;
-        font-size: 1em;
-    }
-
-    #navbar ul li a{
-        font-size: 0.9em;
-        padding: 5px;
-        margin: 8px;
-     }
-
-    #navbar #myInput{
-        padding: 8px 0;
-        width: 40%;
-        margin-top: 10px;
-    }
-
-    #main{
         margin-top:95px ;
     }
 
-    #content-grid{
-        width: 100%;
-        margin: 0;
-    }
-
 }
 
-@media(max-width:350px){
+@media(max-width:570px){
     #navbar{
         height: 130px;
     }
 
     #navbar ul {
         flex-direction: column;
-        padding: 20px 0;
+        padding: 0px 0;
     }
 
-    #logo{
-        opacity: 0;
+    #navbar ul h2{
+        display: block;
+        margin: 10px 10px;
     }
-
 
     #navbar ul #logolink {
         /* border: salmon 1px solid; */
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        padding: 0;
-        /* margin: 0 0 10px 60px; */
-    }
-
-    #navbar ul li a{
-        padding: 5px;
-        margin: 5px 2px;
+        padding: 10px;
+        margin: 15px;
     }
 
     #navbar #myInput{
         width: 90%;
 
     }
-
     .tile #img{
         height: 150px;
     }
 
     .tile:hover{
-        transform: scale(.9);
+        transform: scale(1.1);
         transition: ease .5s;
     } 
 
     #main{
         margin-top:130px ;
+    }
+}
+
+@media(max-width:320px){
+    
+    .tile{
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .tile #img{
+        max-width: inherit;
+    }
+
+    
+    .tile:hover{
+        transform: scale(0.95);
+        transition: ease .5s;
+    } 
+}
+
+
+@media(max-width:260px){
+    #logo{
+        display: none;
+    }
+
+    #navbar{
+        height: 100px;
+    }
+
+    #main{
+        margin-top: 100px;
+    }
+
+    #footer{
+        padding: 40px 10px;
     }
 
 

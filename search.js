@@ -20,7 +20,7 @@ function myFunction() {
         a = tile[i].getElementsByTagName("h2")[0].getElementsByTagName("a")[0];
 
         txtValue = a.textContent || a.innerText;
-        console.log(txtValue);
+        // console.log(txtValue);
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
             tile[i].style.display = "";
         } else {

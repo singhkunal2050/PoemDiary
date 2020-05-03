@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="img/poetry.png" >
+    <link rel="stylesheet" href="./lib/view-bigimg.css">
     <script src="search.js"></script>
+    <script src="./lib/view-bigimg.js"></script>
+    <script defer src="script.js"></script>
     <title>PoemDiary</title>
 </head>
 <body onload="demo()">
@@ -16,63 +20,81 @@
                         <img id= "logo" src="img/poetry.png"alt="logo">PoemDiary
                     </a>
                 </h2>
-
                 <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for poems.." autofocus>
-                 <li><a href="addpoem.html" style="font-size: 2em; padding: 0 20px;">+</a></li>
-                <!-- <li><a href="">About</a></li>                 -->
             </ul>
         </section>
     </header>
+
     <main id="main">
         <section id="content-grid">
             <div id="tiles">
                 <div class="tile" id="alladin">
                     <img src="img/alladin.jpg" alt="" id="img">
-                    <h2><a href="">Alladin</a></h2>
+                    <h2><a class="link" >Alladin</a></h2>
                 </div>
                 <div class="tile" id="avatar">
                     <img src="img/avatar.jpg" alt="" id="img">
-                    <h2><a href="">Avatar</a></h2>
+                    <h2><a class="link" >Avatar</a></h2>
                 </div>
                 <div class="tile" id="bean">
                     <img src="img/bean.jpg" alt="" id="img">
-                    <h2><a href="">Bean</a></h2>
+                    <h2><a class="link" >Bean</a></h2>
                 </div>
                 <div class="tile" id="bigbunny">
                     <img src="img/bigbunny.jpg" alt="" id="img">
-                    <h2><a href="">Bigbunny</a></h2>
+                    <h2><a class="link" >Bigbunny</a></h2>
                 </div>
                 <div class="tile" id="doraemon">
                     <img src="img/doraemon.jpg" alt="" id="img">
-                    <h2><a href="">Doraemon</a></h2>
+                    <h2><a class="link" >Doraemon</a></h2>
                 </div>
                 <div class="tile" id="hatori">
                     <img src="img/hatori.jpg" alt="" id="img">
-                    <h2><a href="">Hatori</a></h2>
+                    <h2><a class="link" >Hatori</a></h2>
                 </div>
                 <div class="tile" id="minions">
                     <img src="img/minions.jpg" alt="" id="img">
-                    <h2><a href="">Minions</a></h2>
+                    <h2><a class="link" >Minions</a></h2>
                 </div>
                 <div class="tile" id="ppgirls">
                     <img src="img/ppgirls.jpg" alt="" id="img">
-                    <h2><a href="">PPgirls</a></h2>
+                    <h2><a class="link" >PPgirls</a></h2>
                 </div>
                 <div class="tile" id="shinchan">
                     <img src="img/shinchan.jpg" alt="" id="img">
-                    <h2><a href="">Shinchan</a></h2>
+                    <h2><a class="link" >Shinchan</a></h2>
                 </div>
                 <div class="tile" id ="simpsons">
                     <img src="img/simpsons.jpg" alt="" id="img">
-                    <h2><a href="">Simpsons</a></h2>
+                    <h2><a class="link" >Simpsons</a></h2>
                 </div>
                 <div class="tile" id="tom">
                     <img src="img/tom.jpg" alt="" id="img">
-                    <h2><a href="">Tom</a></h2>
+                    <h2><a class="link" >Tom</a></h2>
                 </div>
                 <div class="tile" id="alladin2">
                     <img src="img/alladin.jpg" alt="" id="img">
-                    <h2><a href="">Alladin2</a></h2>
+                    <h2><a class="link" >Alladin2</a></h2>
+                </div>
+                <div class="tile" id="pokemon">
+                    <img src="img/pokemon.jpg" alt="" id="img">
+                    <h2><a class="link" >Pokemon</a></h2>
+                </div>
+                <div class="tile" id ="batman">
+                    <img src="img/batman.jpg" alt="" id="img">
+                    <h2><a class="link" >Batman</a></h2>
+                </div>
+                <div class="tile" id="courage">
+                    <img src="img/courage.jpg" alt="" id="img">
+                    <h2><a class="link" >Courage</a></h2>
+                </div>
+                <div class="tile" id="mario">
+                    <img src="img/mario.jpg" alt="" id="img">
+                    <h2><a class="link">Mario</a></h2>
+                </div>
+                <div class="tile" id="spongbob">
+                    <img src="img/spongbob.png" alt="" id="img">
+                    <h2><a class="link">Spongbob</a></h2>
                 </div>
             </div>
         </section>
@@ -81,9 +103,21 @@
         <section id="footer">
             <ul>
                 <li>PoemDiary</li>
-                <li>Design by:<a href="">singhkunal2050 &copy;</a></li>
+                <li>Design:<a href="" style="text-decoration: underline;">singhkunal2050 &copy;</a></li>
             </ul>
         </section>
     </footer>
+    <script>
+        var viewer = new ViewBigimg()
+    
+        var wrap = document.getElementById('tiles')
+        // console.log(viewer)
+        wrap.onclick = function (e) {
+          if (e.target.nodeName === 'IMG') {
+            // viewer.show(e.target.src.replace('.jpg', '-big.jpg'))
+            viewer.show(e.target.src)
+          }
+        }
+    </script>
 </body>
 </html>
