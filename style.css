@@ -122,6 +122,7 @@ a{
 
 #main{
     background-image: url('img/music.png');
+    transition: .5s ease-in-out;
     background-size: 200px 200px;
     background-repeat: no-repeat;
     background-position: right;
